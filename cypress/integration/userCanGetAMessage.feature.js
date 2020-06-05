@@ -9,4 +9,8 @@ describe('user can get a message', () => {
         cy.get('#quote').click()
         cy.get('#message').should('be.visible')
     })
+
+    it('displays hello how are you message', () =>{
+        cy.get('#message').should('contain', 'hello how are you')
+    })
 })
